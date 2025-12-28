@@ -40,33 +40,7 @@ Backend hosted on Microsoft Azure App Service
 
 Database hosted using managed PostgreSQL (Neon)
 
- Project Structure
-GenieSugar-Latest/
-│
-├── client/                 # Frontend (React + Vite)
-│   ├── public/             # Static assets
-│   ├── src/                # React components, pages, hooks
-│   └── index.html
-│
-├── server/                 # Backend (Node.js + Express)
-│   ├── index.ts            # Server entry point
-│   ├── routes.ts           # API routes (auth, health data)
-│   ├── db.ts               # Database connection
-│   ├── storage.ts          # Database access layer
-│   └── email.ts            # Email services
-│
-├── shared/                 # Shared schemas and types
-│
-├── thesis-docs/            # Documentation and academic material
-│
-├── drizzle.config.ts       # Database migration config
-├── package.json
-├── tsconfig.json
-├── vite.config.ts
-├── .env                    # Environment variables (not committed)
-└── README.md
-
-⚙️ Technologies Used
+ Technologies Used
 Frontend
 
 React (TypeScript)
