@@ -149,9 +149,13 @@ export async function registerRoutes(httpServer: Server, app: Express): Promise<
       }
 
       // Send welcome email (non-blocking)
-      sendWelcomeEmail(user.email, user.fullName, user.role).catch(err => {
-        console.error("Failed to send welcome email:", err);
-      });
+        sendWelcomeEmail(user.email, user.fullName, user.role)
+            .then(() => {
+                console.log("Welcome email sent to:", user.email);
+            })
+            .catch(err => {
+                console.error("Failed to send welcome email:", err);
+            });
 
       // Create verification token and send verification email
       const verificationToken = randomBytes(32).toString("hex");
